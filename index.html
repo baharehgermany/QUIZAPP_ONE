@@ -16,11 +16,15 @@
 
 </head>
 
-<body>
+<body onload="init()">
+
+    <div id="question">
+        "question_": "Wer hat HTML erfunden", "answer_1": "Robbie Williams", "answer_2": "Lady Gaga", "answer_3": "Tim Berners-Lee", "answer_4": "Justin Bieber", "right_answer": 3
+    </div>
 
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">Quiz App</span>
+            <span class="navbar-brand mb-0 h1">QuizApp</span>
         </div>
     </nav>
 
@@ -30,29 +34,29 @@
         <div class="card quiz-card">
             <img src="img/background.jpg" class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title">Frage</h5>
+                <h5 class="card-title" id="questiontext">Frage</h5>
 
 
-                <div class="card mb-2">
-                    <div class="card-body">
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_1')">
+                    <div class="card-body" id="answer_1">
                         Antwort
                     </div>
                 </div>
 
-                <div class="card mb-2">
-                    <div class="card-body">
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_2')">
+                    <div class="card-body" id="answer_2">
                         Antwort
                     </div>
                 </div>
 
-                <div class="card mb-2">
-                    <div class="card-body">
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_3')">
+                    <div class="card-body" id="answer_3">
                         Antwort
                     </div>
                 </div>
 
-                <div class="card mb-2">
-                    <div class="card-body">
+                <div class="card quiz-answer-card mb-2" onclick="answer('answer_4')">
+                    <div class="card-body" id="answer_4">
                         Antwort
                     </div>
                 </div>
@@ -60,7 +64,7 @@
 
                 <div class="question-footer">
                     <span>
-                        <b>1</b> von <b>5</b> Fragen
+                        <b>1</b> von <b id="all-questionns">5</b> Fragen
                     </span>
 
                     <button type="button" class="btn btn-warning">Nächste Frage</button>
@@ -68,15 +72,6 @@
             </div>
         </div>
     </div>
-
-
-
-    <!-- Platz zum abhacken/bestätigen -->
-    <!-- <div>
-        <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-        </div> -->
-
-
 </body>
 
 </html>
